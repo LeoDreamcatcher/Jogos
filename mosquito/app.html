@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo mata negocio</title>
+    <link rel="stylesheet" type="text/css" href="assets/estilo.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+    <script src="jogo.js"></script>
+
+</head>
+<body onresize="ajustaTamanhoPalcoJogo()">
+
+    <div class="painel">
+        <div class="vidas">
+            <img id="v1" src="assets/imagens/coracao_cheio.png"/>
+            <img id="v2" src="assets/imagens/coracao_cheio.png"/>
+            <img id="v3" src="assets/imagens/coracao_cheio.png"/>
+        </div>
+        <div class="cronometro">
+            Tempo restante: <span id="cronometro"></span>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('cronometro').innerHTML = tempo
+
+        let criaMosquito = setInterval(function(){
+            posicaoRandomica()
+        },criaMosquitoTempo)
+    </script>
+    
+</body>
+</html>
+
+
